@@ -1,0 +1,30 @@
+.booking-section-container {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 18px;
+
+  .text-holder {
+    background-color: $light-black;
+    padding: 44px 32px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.4;
+    font-family: $font-second;
+    font-weight: $weight-light;
+    letter-spacing: $space-s;
+  }
+
+  h2 {
+    padding: 16px 0;
+    text-transform: uppercase;
+    font-weight: $weight-regular;
+    letter-spacing: $space-xs;
+  }
+
+  .text-description {
+    font-size: 16px;
+    line-height: 1.75;
+    padding-bottom: 28px;
+  }
+}

@@ -8,13 +8,16 @@ a {
   text-decoration: none;
   color: $white;
 }
+a:hover {
+  cursor: pointer;
+}
 img {
   max-width: 100%;
 }
 
 .body-container {
   max-width: 1920px;
-  background-color: $accent;
+  background-color: $dark-grey;
   width: 100%;
   margin: 0 auto;
   color: $white;

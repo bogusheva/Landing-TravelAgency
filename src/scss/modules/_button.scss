@@ -1,6 +1,7 @@
 .button {
   font-family: $font-second;
   background-color: $accent;
+  position: relative;
   color: $white;
   border: 1px solid $accent;
   font-size: 16px;
@@ -8,6 +9,11 @@
   letter-spacing: $space-s;
   text-transform: uppercase;
   padding: 20px 32px;
+
+  &.button-effect {
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
 
   &.button-search {
     font-size: 14px;
