@@ -1,0 +1,45 @@
+//Breakpoints for forming queries for different modes: mobile, tablet, desktop
+$width-desktop-l: 1920px;
+$width-desktop-m: 1360px;
+$width-desktop-s: 1024px;
+$width-tablet: 768px;
+$width-mobile: 576px;
+
+//colors
+$grey: #999999;
+$dark-grey: #333333;
+$black: #000000;
+$white: #ffffff;
+$accent: #5373fd;
+$dark-accent: #5373fd;
+$blue: #002aff;
+$red: #ff6363;
+
+//font-family
+$font-main: "aleo";
+$font-second: "josefin_sans";
+$font-family-fallback: sans-serif;
+
+//font-size
+$font-size-small-1: 11px;
+$font-size-small-2: 12px;
+$font-size-small-3: 13px;
+$font-size-middle-1: 15px;
+$font-size-middle-2: 22px;
+$font-size-middle-3: 24px;
+$font-size-large-1: 40px;
+$font-size-large-2: 60px;
+$font-size-large-3: 70px;
+
+/*14px; 16px; 22px; 36px; 48px;*/
+
+//font-weight
+$weight-light: 300;
+$weight-regular: 400;
+$weight-bold: 700;
+
+//font-spacing
+$space-xs: 0;
+$space-s: 0.1em;
+$space-m: 0.2em;
+$space-xl: 0.31em;

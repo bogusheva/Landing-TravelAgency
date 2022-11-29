@@ -1,0 +1,25 @@
+.icons-section {
+  background-color: $dark-grey;
+  padding: 60px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  .magnifying-glass-icon {
+    fill: $accent;
+  }
+
+  .circle-check-icon {
+    fill: $red;
+  }
+  .subheading {
+    display: block;
+    font-family: $font-second;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: $space-xs;
+  }
+  .thumb-up-icon {
+    fill: $blue;
+  }
+}

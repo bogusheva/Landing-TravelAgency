@@ -1,0 +1,18 @@
+.button {
+  font-family: $font-second;
+  background-color: $accent;
+  color: $white;
+  border: 1px solid $accent;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: $space-s;
+  text-transform: uppercase;
+  padding: 20px 32px;
+
+  &.button-search {
+    font-size: 14px;
+    line-height: 1.43;
+    width: 100%;
+    padding: 16px 20px;
+  }
+}

@@ -1,0 +1,131 @@
+.header-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  @include tablet-view {
+    flex-direction: column;
+  }
+
+  &.active {
+    .nav-list {
+      opacity: 1;
+      visibility: visible;
+    }
+    .burger-btn {
+      span {
+        opacity: 0;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+        top: 11px;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        bottom: 13px;
+      }
+    }
+  }
+  .logo-link {
+    width: 100%;
+    font-size: 24px;
+    font-weight: $weight-bold;
+    font-family: $font-second;
+    line-height: 1.17;
+    letter-spacing: $space-s;
+  }
+
+  .nav-holder {
+    justify-self: flex-start;
+
+    @include desktop-view {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .nav-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease-in-out 0.3s;
+    background-color: $accent;
+    padding: 32px;
+
+    @include tablet-view {
+      flex-direction: row;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+  }
+  .nav-item {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-second;
+    font-size: 14px;
+    font-weight: $weight-regular;
+    line-height: 1.43;
+    letter-spacing: $space-s;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .burger-holder {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+  }
+  .burger-btn {
+    position: relative;
+    width: 40px;
+    height: 24px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    @include tablet-view {
+      display: none;
+    }
+
+    span,
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      border-top: 2px solid $white;
+      transition: all ease-in-out 0.3s;
+    }
+
+    span {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+  }
+}

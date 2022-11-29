@@ -1,0 +1,28 @@
+.why-section-container {
+  width: 100%;
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  padding: 60px 18px;
+  height: 630px;
+
+  .images-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  h2 {
+    font-family: $font-second;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: $space-xs;
+    padding: 37px 0 19px;
+  }
+  .text-description {
+    font-size: 16px;
+    font-weight: $weight-light;
+    line-height: 1.75;
+    letter-spacing: $space-xs;
+    padding-bottom: 24px;
+  }
+}

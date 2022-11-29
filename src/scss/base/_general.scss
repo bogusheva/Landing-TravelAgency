@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+img {
+  max-width: 100%;
+}
+
+.body-container {
+  max-width: 1920px;
+  background-color: $accent;
+  width: 100%;
+  margin: 0 auto;
+  color: $white;
+  font-family: $font-main;
+  font-weight: $weight-regular;
+  letter-spacing: $space-xs;
+  text-align: center;
+}
