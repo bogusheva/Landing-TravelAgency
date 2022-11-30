@@ -5,10 +5,26 @@
   @include tablet-view {
     padding: 60px 24px;
   }
+  @include desktop-m-view {
+    padding: 60px 32px;
+  }
+  @include desktop-l-view {
+    padding: 60px 300px;
+  }
 
   .line-holder {
     display: none;
     @include desktop-view {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include desktop-m-view {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include desktop-l-view {
       display: block;
       width: 80%;
       margin: 0 auto;
@@ -20,6 +36,14 @@
     flex-direction: column;
     gap: 60px;
     @include desktop-view {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    @include desktop-m-view {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    @include desktop-l-view {
       flex-direction: row;
       justify-content: space-around;
     }

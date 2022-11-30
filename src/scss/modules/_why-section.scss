@@ -2,25 +2,115 @@
   width: 100%;
   background-position: 50% 70%;
   background-repeat: no-repeat;
-  background-size: fill;
   padding: 60px 18px;
 
   @include tablet-view {
     padding: 60px 24px;
   }
+  @include desktop-view {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 124px 32px;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include desktop-m-view {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 124px 110px;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include desktop-l-view {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 124px 300px;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  .text-container button {
-    margin: 0 auto;
+  .text-container {
+    @include desktop-view {
+      width: 50%;
+      text-align: left;
+    }
+    @include desktop-m-view {
+      width: 50%;
+      text-align: left;
+    }
+    @include desktop-l-view {
+      width: 50%;
+      text-align: left;
+    }
+
+    button {
+      margin: 0 auto;
+      @include desktop-view {
+        margin: 0;
+      }
+      @include desktop-m-view {
+        margin: 0;
+      }
+      @include desktop-l-view {
+        margin: 0;
+      }
+    }
   }
 
   .images-container {
     display: flex;
     flex-wrap: nowrap;
     gap: 24px;
-    justify-content: space-evenly;
+
+    @include desktop-view {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 45%;
+    }
+    @include desktop-m-view {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 45%;
+    }
+    @include desktop-l-view {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 45%;
+    }
 
     .image-holder {
       width: 100%;
+
+      @include desktop-view {
+        padding-right: 36px;
+      }
+      @include desktop-m-view {
+        padding-right: 111px;
+      }
+      @include desktop-l-view {
+        padding-right: 150px;
+      }
+
+      &.reverse {
+        @include desktop-view {
+          padding-right: 0;
+          padding-left: 36px;
+        }
+        @include desktop-m-view {
+          padding-right: 0;
+          padding-left: 111px;
+        }
+        @include desktop-l-view {
+          padding-right: 0;
+          padding-left: 150px;
+        }
+      }
     }
   }
 

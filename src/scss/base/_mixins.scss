@@ -1,19 +1,19 @@
 @mixin tablet-view {
-  @media (min-width: $width-tablet) {
+  @media (min-width: $width-tablet) and (max-width: #{$width-desktop-s - 1px}) {
     @content;
   }
 }
 @mixin desktop-view {
-  @media (min-width: $width-desktop-s) {
+  @media (min-width: $width-desktop-s) and (max-width: #{$width-desktop-m - 1px}) {
     @content;
   }
 }
 @mixin desktop-m-view {
-  @media (min-width: $width-desktop-m) {
+  @media (min-width: $width-desktop-m) and (max-width: #{$width-desktop-l - 1px}) {
     @content;
   }
 }
-@mixin desktop-m-view {
+@mixin desktop-l-view {
   @media (min-width: $width-desktop-l) {
     @content;
   }

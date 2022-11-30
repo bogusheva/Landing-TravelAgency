@@ -16,6 +16,27 @@
     padding: 32px 30px 0;
   }
 
+  @include desktop-view {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 32px;
+  }
+
+  @include desktop-m-view {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 32px 110px;
+  }
+
+  @include desktop-l-view {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 32px 300px;
+  }
+
   &.sticky {
     position: fixed;
     top: 0;
@@ -61,6 +82,14 @@
       display: flex;
       justify-content: center;
     }
+    @include desktop-m-view {
+      display: flex;
+      justify-content: center;
+    }
+    @include desktop-l-view {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .nav-list {
@@ -87,6 +116,36 @@
       display: flex;
       gap: 28px;
       flex-wrap: wrap;
+    }
+    @include desktop-view {
+      flex-direction: row;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+    @include desktop-m-view {
+      flex-direction: row;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+    @include desktop-l-view {
+      flex-direction: row;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 0;
     }
   }
 
@@ -115,6 +174,15 @@
     cursor: pointer;
 
     @include tablet-view {
+      display: none;
+    }
+    @include desktop-view {
+      display: none;
+    }
+    @include desktop-m-view {
+      display: none;
+    }
+    @include desktop-l-view {
       display: none;
     }
 

@@ -4,7 +4,13 @@
     padding: 60px 24px 120px;
   }
   @include desktop-view {
-    padding: 120px 32px 120px;
+    padding: 120px 32px;
+  }
+  @include desktop-m-view {
+    padding: 120px 110px;
+  }
+  @include desktop-l-view {
+    padding: 120px 300px;
   }
 
   h2 {
@@ -17,6 +23,12 @@
     @include desktop-view {
       display: flex;
     }
+    @include desktop-m-view {
+      display: flex;
+    }
+    @include desktop-l-view {
+      display: flex;
+    }
   }
   .img-holder {
     width: 100%;
@@ -24,9 +36,25 @@
     @include desktop-view {
       width: calc(100% / 3);
     }
+    @include desktop-m-view {
+      width: calc(100% / 3);
+    }
+    @include desktop-l-view {
+      width: calc(100% / 3);
+    }
 
     img {
       @include desktop-view {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @include desktop-m-view {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @include desktop-l-view {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -39,6 +67,12 @@
     font-family: $font-second;
     text-align: left;
     @include desktop-view {
+      width: calc(100% / 3 * 2);
+    }
+    @include desktop-m-view {
+      width: calc(100% / 3 * 2);
+    }
+    @include desktop-l-view {
       width: calc(100% / 3 * 2);
     }
 
