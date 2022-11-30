@@ -4,15 +4,15 @@
   font-family: $font-second;
 
   h2 {
-    font-size: 24px;
+    font-size: $font-size-middle-3;
     line-height: 1.17;
     letter-spacing: $space-s;
     padding-bottom: 8px;
   }
   .subheading {
     display: block;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: $font-size-small-1;
+    line-height: 1.43;
     letter-spacing: $space-m;
     padding-bottom: 20px;
   }

@@ -4,7 +4,7 @@
   position: relative;
   color: $white;
   border: 1px solid $accent;
-  font-size: 16px;
+  font-size: $font-size-small-2;
   line-height: 1.25;
   letter-spacing: $space-s;
   text-transform: uppercase;
@@ -21,7 +21,7 @@
   }
 
   &.button-search {
-    font-size: 14px;
+    font-size: $font-size-small-1;
     line-height: 1.43;
     width: 100%;
     padding: 16px 20px;

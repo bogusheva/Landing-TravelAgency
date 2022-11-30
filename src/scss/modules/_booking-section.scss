@@ -22,7 +22,7 @@
     background-color: $light-black;
     padding: 44px 32px;
     text-align: left;
-    font-size: 20px;
+    font-size: $font-size-middle-1;
     line-height: 1.4;
     font-family: $font-second;
     font-weight: $weight-light;
@@ -40,7 +40,7 @@
   }
 
   .text-description {
-    font-size: 16px;
+    font-size: $font-size-small-2;
     line-height: 1.75;
     padding-bottom: 28px;
   }
