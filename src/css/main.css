@@ -849,9 +849,14 @@ img {
     padding: 60px 24px;
   }
 }
-@media (min-width: 1360px) and (max-width: 1919px) {
+@media (min-width: 1024px) and (max-width: 1359px) {
   .icons-section-container {
     padding: 60px 32px;
+  }
+}
+@media (min-width: 1360px) and (max-width: 1919px) {
+  .icons-section-container {
+    padding: 60px 110px;
   }
 }
 @media (min-width: 1920px) {
