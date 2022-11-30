@@ -12,6 +12,7 @@
   z-index: 5;
   @include tablet-view {
     flex-direction: column;
+    padding: 32px 30px 0;
   }
   &.sticky {
     position: fixed;
@@ -86,15 +87,11 @@
   .nav-item {
     text-align: center;
     text-transform: uppercase;
-    font-family: $font-second;
+    font-family: $font-main;
     font-size: 14px;
     font-weight: $weight-regular;
     line-height: 1.43;
     letter-spacing: $space-s;
-
-    a {
-      color: $white;
-    }
   }
 
   .burger-holder {

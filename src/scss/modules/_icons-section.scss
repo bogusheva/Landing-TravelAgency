@@ -1,8 +1,19 @@
 .icons-section-container {
-  padding: 60px 18px;
   display: flex;
   flex-direction: column;
   gap: 60px;
+  padding: 60px 18px;
+  @include tablet-view {
+    padding: 60px 24px;
+  }
+  @include desktop-view {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .icon-holder {
+    padding: 16px;
+  }
 
   .magnifying-glass-icon {
     fill: $accent;
@@ -15,9 +26,9 @@
   }
   .subheading {
     display: block;
-    font-family: $font-second;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: $space-xs;
+    padding-top: 4px;
   }
 }

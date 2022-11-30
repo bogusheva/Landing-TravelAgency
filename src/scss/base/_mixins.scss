@@ -1,10 +1,20 @@
 @mixin tablet-view {
-  @media (min-width: $width-tablet) and (max-width: #{$width-desktop-s - 1px}) {
+  @media (min-width: $width-tablet) {
     @content;
   }
 }
 @mixin desktop-view {
   @media (min-width: $width-desktop-s) {
+    @content;
+  }
+}
+@mixin desktop-m-view {
+  @media (min-width: $width-desktop-m) {
+    @content;
+  }
+}
+@mixin desktop-m-view {
+  @media (min-width: $width-desktop-l) {
     @content;
   }
 }

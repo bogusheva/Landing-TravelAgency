@@ -92,6 +92,7 @@ video {
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
+button,
 details,
 figcaption,
 figure,
@@ -127,7 +128,8 @@ table {
 }
 figure,
 h2,
-h1 {
+h1,
+p {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0;
@@ -139,4 +141,14 @@ ul {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 0;
+}
+
+img {
+  width: inherit;
+}
+input:focus {
+  outline: none;
+  &::placeholder {
+    color: transparent;
+  }
 }

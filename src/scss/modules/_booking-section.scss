@@ -4,6 +4,20 @@
   background-repeat: no-repeat;
   padding: 120px 18px;
 
+  @include tablet-view {
+    padding: 120px 24px;
+  }
+  @include desktop-view {
+    padding: 220px 32px 120px;
+  }
+  &.reverse {
+    .text-holder {
+      @include desktop-view {
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+
   .text-holder {
     background-color: $light-black;
     padding: 44px 32px;
@@ -13,6 +27,9 @@
     font-family: $font-second;
     font-weight: $weight-light;
     letter-spacing: $space-s;
+    @include desktop-view {
+      max-width: 550px;
+    }
   }
 
   h2 {

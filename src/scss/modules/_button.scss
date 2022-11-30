@@ -1,5 +1,5 @@
 .button {
-  font-family: $font-second;
+  font-family: $font-main;
   background-color: $accent;
   position: relative;
   color: $white;
@@ -9,6 +9,11 @@
   letter-spacing: $space-s;
   text-transform: uppercase;
   padding: 20px 32px;
+
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 
   &.button-effect {
     background-repeat: no-repeat;

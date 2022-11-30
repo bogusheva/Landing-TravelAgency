@@ -1,5 +1,11 @@
 .feedback-section-container {
-  padding: 60px 24px 120px;
+  padding: 60px 18px 120px;
+  @include tablet-view {
+    padding: 60px 24px 120px;
+  }
+  @include desktop-view {
+    padding: 120px 32px 120px;
+  }
 
   h2 {
     font-size: 36px;
@@ -8,9 +14,15 @@
   }
   .feedback-holder {
     width: 100%;
+    @include desktop-view {
+      display: flex;
+    }
   }
   .img-holder {
     width: 100%;
+    @include desktop-view {
+      width: calc(100% / 3);
+    }
     img {
       width: fit-content;
     }
@@ -20,6 +32,9 @@
     padding: 48px 60px;
     font-family: $font-second;
     text-align: left;
+    @include desktop-view {
+      width: calc(100% / 3 * 2);
+    }
 
     figcaption {
       font-size: 20px;
