@@ -23,6 +23,10 @@
     line-height: 1.08;
     padding-top: 295px;
     padding-bottom: 8px;
+
+    @include small-mobile-view {
+      font-size: $font-size-middle-3;
+    }
   }
 
   .subheading {
@@ -36,6 +40,9 @@
   .form-holder {
     width: 100%;
     max-width: 540px;
+    @include small-mobile-view {
+      max-width: 250px;
+    }
     @include tablet-view {
       max-width: 647px;
     }
@@ -44,6 +51,13 @@
     display: flex;
     background-color: $white;
     padding: 4px 5px 4px 36px;
+    @include small-mobile-view {
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      background-color: transparent;
+    }
   }
 
   .button-holder {
@@ -67,6 +81,10 @@
   padding: 0 5px;
   color: $grey;
   border: none;
+  @include small-mobile-view {
+    padding: 5px;
+    font-size: 12px;
+  }
 
   &:focus {
     outline: none;

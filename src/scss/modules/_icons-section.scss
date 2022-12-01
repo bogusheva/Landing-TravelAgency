@@ -43,12 +43,19 @@
     font-size: $font-size-large-1;
     line-height: 1.11;
     padding-top: 4px;
+    @include small-mobile-view {
+      font-size: $font-size-middle-1;
+    }
   }
   .icon-search,
   .icon-thumbs-up,
   .icon-check-circle {
     font-family: $font-main, $font-family-fallback;
     font-size: $font-size-large-3;
+
+    @include small-mobile-view {
+      font-size: $font-size-middle-2;
+    }
   }
   .icon-search {
     color: $accent;

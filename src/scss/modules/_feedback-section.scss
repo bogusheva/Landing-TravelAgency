@@ -14,6 +14,11 @@
     font-size: $font-size-large-1;
     line-height: 1.11;
     padding-bottom: 60px;
+
+    @include small-mobile-view {
+      font-size: $font-size-middle-2;
+      padding-bottom: 30px;
+    }
   }
 
   .feedback-holder {
@@ -43,6 +48,11 @@
     font-family: $font-second, $font-family-fallback;
     font-size: $font-size-middle-1;
     text-align: left;
+
+    @include small-mobile-view {
+      font-size: $font-size-small-2;
+      padding: 10px;
+    }
     @include desktop-view {
       width: calc(100% / 3 * 2);
     }

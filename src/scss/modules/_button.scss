@@ -15,17 +15,6 @@
     cursor: pointer;
     background-color: $dark-accent;
   }
-  &.button-text {
-    background-color: transparent;
-    border: transparent;
-    position: absolute;
-    padding: 0;
-    top: 20px;
-    left: 32px;
-    &.book {
-      left: 56px;
-    }
-  }
 
   &.button-effect {
     width: 215px;
@@ -53,5 +42,21 @@
     font-size: $font-size-small-1;
     line-height: 1.43;
     padding: 16px 20px;
+  }
+}
+.button-text {
+  font-size: $font-size-small-2;
+  line-height: 1.25;
+  letter-spacing: $space-s;
+  text-transform: uppercase;
+  padding: 20px 32px;
+  background-color: transparent;
+  border: transparent;
+  position: absolute;
+  padding: 0;
+  top: 20px;
+  left: 32px;
+  &.book {
+    left: 56px;
   }
 }

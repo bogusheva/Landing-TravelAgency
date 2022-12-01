@@ -30,6 +30,9 @@ img {
 .wrapper {
   max-width: 540px;
   margin: 0 auto;
+  @include small-mobile-view {
+    padding: 0 10px;
+  }
   @include tablet-view {
     max-width: 720px;
   }

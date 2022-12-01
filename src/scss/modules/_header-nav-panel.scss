@@ -50,6 +50,9 @@
     font-family: $font-second, $font-family-fallback;
     line-height: 1.17;
     letter-spacing: $space-s;
+    @include small-mobile-view {
+      font-size: $font-size-middle-1;
+    }
   }
 
   .nav-holder {
@@ -97,6 +100,11 @@
     position: absolute;
     top: 32px;
     right: 30px;
+
+    @include small-mobile-view {
+      top: 30px;
+      right: 10px;
+    }
   }
 
   .burger-btn {

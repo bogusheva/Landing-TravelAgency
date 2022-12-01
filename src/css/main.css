@@ -281,6 +281,11 @@ img {
   max-width: 540px;
   margin: 0 auto;
 }
+@media (min-width: 280px) and (max-width: 575px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+}
 @media (min-width: 768px) {
   .wrapper {
     max-width: 720px;
@@ -321,17 +326,6 @@ img {
   cursor: pointer;
   background-color: #486bfe;
 }
-.button.button-text {
-  background-color: transparent;
-  border: transparent;
-  position: absolute;
-  padding: 0;
-  top: 20px;
-  left: 32px;
-}
-.button.button-text.book {
-  left: 56px;
-}
 .button.button-effect {
   width: 215px;
   height: 60px;
@@ -357,6 +351,23 @@ img {
   font-size: 14px;
   line-height: 1.43;
   padding: 16px 20px;
+}
+
+.button-text {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 20px 32px;
+  background-color: transparent;
+  border: transparent;
+  position: absolute;
+  padding: 0;
+  top: 20px;
+  left: 32px;
+}
+.button-text.book {
+  left: 56px;
 }
 
 .header {
@@ -421,6 +432,11 @@ img {
   line-height: 1.17;
   letter-spacing: 0.1em;
 }
+@media (min-width: 280px) and (max-width: 575px) {
+  .header-menu .logo-link {
+    font-size: 20px;
+  }
+}
 .header-menu .nav-holder {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,6 +494,12 @@ img {
   position: absolute;
   top: 32px;
   right: 30px;
+}
+@media (min-width: 280px) and (max-width: 575px) {
+  .header-menu .burger-holder {
+    top: 30px;
+    right: 10px;
+  }
 }
 .header-menu .burger-btn {
   position: relative;
@@ -551,6 +573,11 @@ img {
   padding-top: 295px;
   padding-bottom: 8px;
 }
+@media (min-width: 280px) and (max-width: 575px) {
+  .hero-section-container h1 {
+    font-size: 24px;
+  }
+}
 .hero-section-container .subheading {
   display: block;
   font-size: 22px;
@@ -561,6 +588,11 @@ img {
 .hero-section-container .form-holder {
   width: 100%;
   max-width: 540px;
+}
+@media (min-width: 280px) and (max-width: 575px) {
+  .hero-section-container .form-holder {
+    max-width: 250px;
+  }
 }
 @media (min-width: 768px) {
   .hero-section-container .form-holder {
@@ -573,6 +605,20 @@ img {
   display: flex;
   background-color: #ffffff;
   padding: 4px 5px 4px 36px;
+}
+@media (min-width: 280px) and (max-width: 575px) {
+  .hero-section-container .form-block {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5px;
+    background-color: transparent;
+  }
 }
 .hero-section-container .button-holder {
   max-width: 139px;
@@ -595,6 +641,12 @@ img {
   padding: 0 5px;
   color: #999999;
   border: none;
+}
+@media (min-width: 280px) and (max-width: 575px) {
+  .input-search {
+    padding: 5px;
+    font-size: 12px;
+  }
 }
 .input-search:focus {
   outline: none;
@@ -663,6 +715,14 @@ img {
   display: flex;
   gap: 24px;
 }
+@media (min-width: 280px) and (max-width: 575px) {
+  .why-section-container .images-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .why-section-container .images-container img {
   max-width: 350px;
 }
@@ -680,6 +740,11 @@ img {
 .why-section-container .images-container .image-holder {
   width: 100%;
   text-align: left;
+}
+@media (min-width: 280px) and (max-width: 575px) {
+  .why-section-container .images-container .image-holder {
+    text-align: center;
+  }
 }
 @media (min-width: 1024px) {
   .why-section-container .images-container .image-holder.reverse {
@@ -720,6 +785,11 @@ img {
   line-height: 1.11;
   padding: 37px 0 19px;
   font-weight: 400;
+}
+@media (min-width: 280px) and (max-width: 575px) {
+  .why-section-container h2 {
+    font-size: 22px;
+  }
 }
 @media (min-width: 768px) {
   .why-section-container h2 {
@@ -806,11 +876,23 @@ img {
   line-height: 1.11;
   padding-top: 4px;
 }
+@media (min-width: 280px) and (max-width: 575px) {
+  .icons-section-container .subheading {
+    font-size: 20px;
+  }
+}
 .icons-section-container .icon-search,
 .icons-section-container .icon-thumbs-up,
 .icons-section-container .icon-check-circle {
   font-family: "aleo", sans-serif;
   font-size: 64px;
+}
+@media (min-width: 280px) and (max-width: 575px) {
+  .icons-section-container .icon-search,
+.icons-section-container .icon-thumbs-up,
+.icons-section-container .icon-check-circle {
+    font-size: 22px;
+  }
 }
 .icons-section-container .icon-search {
   color: #5373fd;
@@ -848,6 +930,12 @@ img {
   font-family: "josefin_sans", sans-serif;
   font-weight: 300;
 }
+@media (min-width: 280px) and (max-width: 575px) {
+  .booking-section-container .text-holder {
+    font-size: 16px;
+    padding: 44px 8px;
+  }
+}
 @media (min-width: 1024px) {
   .booking-section-container .text-holder {
     max-width: 550px;
@@ -873,6 +961,11 @@ img {
   line-height: 1.75;
   letter-spacing: 0.1em;
   padding-bottom: 28px;
+}
+@media (min-width: 280px) and (max-width: 575px) {
+  .booking-section-container .text-description {
+    font-size: 14px;
+  }
 }
 @media (min-width: 1024px) {
   .booking-section-container .text-description {
@@ -901,6 +994,12 @@ img {
   font-size: 36px;
   line-height: 1.11;
   padding-bottom: 60px;
+}
+@media (min-width: 280px) and (max-width: 575px) {
+  .feedback-section-container h2 {
+    font-size: 22px;
+    padding-bottom: 30px;
+  }
 }
 @media (min-width: 1024px) {
   .feedback-section-container .feedback-holder {
@@ -931,6 +1030,12 @@ img {
   font-family: "josefin_sans", sans-serif;
   font-size: 20px;
   text-align: left;
+}
+@media (min-width: 280px) and (max-width: 575px) {
+  .feedback-section-container .blockquote {
+    font-size: 16px;
+    padding: 10px;
+  }
 }
 @media (min-width: 1024px) {
   .feedback-section-container .blockquote {
@@ -978,6 +1083,11 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media (min-width: 280px) and (max-width: 575px) {
+  .footer-container .socials-icons {
+    gap: 16px;
+  }
 }
 .footer-container .icon-facebook-f,
 .footer-container .icon-twitter,
