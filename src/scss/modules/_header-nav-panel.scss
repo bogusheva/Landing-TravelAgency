@@ -1,46 +1,24 @@
 .header {
-  position: relative;
+  position: fixed;
+  background-color: $accent;
+  width: 100%;
+  top: 0;
+  z-index: 5;
 }
 
 .header-menu {
-  width: 100%;
-  background-color: $accent;
-  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 30px;
-  z-index: 5;
+  padding: 32px 0;
   @include tablet-view {
     flex-direction: column;
-    padding: 32px 30px 0;
+    padding-bottom: 0;
   }
 
   @include desktop-view {
     flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-between;
-    padding: 32px;
-  }
-
-  @include desktop-m-view {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 32px 110px;
-  }
-
-  @include desktop-l-view {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 32px 300px;
-  }
-
-  &.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+    padding: 32px 0;
   }
 
   &.active {
@@ -61,109 +39,66 @@
 
       &:after {
         transform: rotate(-45deg);
-        bottom: 13px;
+        bottom: 12px;
       }
     }
   }
 
   .logo-link {
-    width: 100%;
     font-size: $font-size-middle-3;
     font-weight: $weight-bold;
-    font-family: $font-second;
+    font-family: $font-second, $font-family-fallback;
     line-height: 1.17;
     letter-spacing: $space-s;
   }
 
   .nav-holder {
-    justify-self: flex-start;
-
-    @include desktop-view {
-      display: flex;
-      justify-content: center;
-    }
-    @include desktop-m-view {
-      display: flex;
-      justify-content: center;
-    }
-    @include desktop-l-view {
-      display: flex;
-      justify-content: center;
-    }
+    display: flex;
+    justify-content: center;
   }
 
   .nav-list {
+    background-color: $accent;
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
     top: 100%;
     left: 0;
     right: 0;
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     margin: 0;
+    padding: 32px;
     opacity: 0;
     visibility: hidden;
     transition: all ease-in-out 0.3s;
-    background-color: $accent;
-    padding: 32px;
 
     @include tablet-view {
       flex-direction: row;
       position: static;
       opacity: 1;
       visibility: visible;
-      display: flex;
       gap: 28px;
-      flex-wrap: wrap;
     }
+
     @include desktop-view {
-      flex-direction: row;
-      position: static;
-      opacity: 1;
-      visibility: visible;
-      display: flex;
       gap: 40px;
-      flex-wrap: wrap;
-      padding: 0;
-    }
-    @include desktop-m-view {
-      flex-direction: row;
-      position: static;
-      opacity: 1;
-      visibility: visible;
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      padding: 0;
-    }
-    @include desktop-l-view {
-      flex-direction: row;
-      position: static;
-      opacity: 1;
-      visibility: visible;
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
       padding: 0;
     }
   }
 
   .nav-item {
-    text-align: center;
     text-transform: uppercase;
-    font-family: $font-main;
     font-size: $font-size-small-1;
-    font-weight: $weight-regular;
     line-height: 1.43;
     letter-spacing: $space-s;
   }
 
   .burger-holder {
     position: absolute;
-    top: 30px;
+    top: 32px;
     right: 30px;
   }
+
   .burger-btn {
     position: relative;
     width: 40px;
@@ -174,15 +109,6 @@
     cursor: pointer;
 
     @include tablet-view {
-      display: none;
-    }
-    @include desktop-view {
-      display: none;
-    }
-    @include desktop-m-view {
-      display: none;
-    }
-    @include desktop-l-view {
       display: none;
     }
 

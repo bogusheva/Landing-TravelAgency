@@ -1,7 +1,7 @@
 .footer-container {
   padding: 80px 0;
   background-color: $black;
-  font-family: $font-second;
+  font-family: $font-second, $font-family-fallback;
 
   h2 {
     font-size: $font-size-middle-3;
@@ -21,14 +21,15 @@
     gap: 32px;
     justify-content: center;
   }
-
-  .social-icon-item {
-    fill: $white;
-    width: 32px;
-    height: 32px;
-
+  .icon-facebook-f,
+  .icon-twitter,
+  .icon-linkedin,
+  .icon-youtube,
+  .icon-pinterest {
+    font-size: $font-size-socials-icons;
+    transition: all ease-in-out 0.3s;
     &:hover {
-      fill: $accent;
+      color: $accent;
     }
   }
 }

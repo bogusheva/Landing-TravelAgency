@@ -1,40 +1,30 @@
+.icons-section {
+  padding: 60px 0;
+}
+
 .icons-section-container {
-  padding: 60px 18px;
   display: flex;
   flex-direction: column;
-  @include tablet-view {
-    padding: 60px 24px;
-  }
-  @include desktop-view {
-    padding: 60px 32px;
-  }
-  @include desktop-m-view {
-    padding: 60px 110px;
-  }
-  @include desktop-l-view {
-    padding: 60px 300px;
-  }
+  align-items: center;
 
   .line-holder {
     display: none;
+    height: 30px;
     @include desktop-view {
       display: block;
       width: 80%;
-      margin: 0 auto;
+      height: 40px;
     }
     @include desktop-m-view {
-      display: block;
-      width: 80%;
-      margin: 0 auto;
+      height: 50px;
     }
     @include desktop-l-view {
-      display: block;
-      width: 80%;
-      margin: 0 auto;
+      height: 57px;
     }
   }
 
-  .icon-items-container {
+  .icons-items-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -42,36 +32,36 @@
       flex-direction: row;
       justify-content: space-around;
     }
-    @include desktop-m-view {
-      flex-direction: row;
-      justify-content: space-around;
-    }
-    @include desktop-l-view {
-      flex-direction: row;
-      justify-content: space-around;
-    }
   }
 
-  .icon-holder {
+  .icons-holder {
     padding: 16px;
   }
 
   .subheading {
     display: block;
-    font-size: 36px;
+    font-size: $font-size-large-1;
     line-height: 1.11;
-    letter-spacing: $space-xs;
     padding-top: 4px;
   }
-  .magnifying-glass-icon {
-    fill: $accent;
+  .icon-search,
+  .icon-thumbs-up,
+  .icon-check-circle {
+    font-family: $font-main, $font-family-fallback;
+    font-size: $font-size-large-3;
+  }
+  .icon-search {
+    color: $accent;
   }
 
-  .circle-check-icon {
-    fill: $red;
+  .icon-check-circle {
+    color: $red;
+    @include desktop-view {
+      padding-left: 10px;
+    }
   }
 
-  .thumb-up-icon {
-    fill: $blue;
+  .icon-thumbs-up {
+    color: $blue;
   }
 }

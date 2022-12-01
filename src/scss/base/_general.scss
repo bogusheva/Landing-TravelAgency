@@ -11,18 +11,35 @@ a {
 a:hover {
   cursor: pointer;
 }
+
 img {
-  max-width: 100%;
+  width: inherit;
 }
 
 .body-container {
-  max-width: 1920px;
+  position: relative;
   background-color: $dark-grey;
   width: 100%;
   margin: 0 auto;
   color: $white;
-  font-family: $font-main;
+  font-family: $font-main, $font-family-fallback;
   font-weight: $weight-regular;
   letter-spacing: $space-xs;
   text-align: center;
+}
+.wrapper {
+  max-width: 540px;
+  margin: 0 auto;
+  @include tablet-view {
+    max-width: 720px;
+  }
+  @include desktop-view {
+    max-width: 960px;
+  }
+  @include desktop-m-view {
+    max-width: 1140px;
+  }
+  @include desktop-l-view {
+    max-width: 1320px;
+  }
 }

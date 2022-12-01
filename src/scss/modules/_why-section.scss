@@ -1,84 +1,32 @@
-.why-section-container {
-  width: 100%;
-  background-position: 50% 70%;
+.why-section {
+  background-position: center;
   background-repeat: no-repeat;
-  padding: 60px 18px;
-
-  @include tablet-view {
-    padding: 60px 24px;
+  background-size: cover;
+  padding: 60px 0;
+  @include desktop-view {
+    padding: 124px 0;
   }
+}
+.why-section-container {
   @include desktop-view {
     display: flex;
     flex-direction: row-reverse;
-    padding: 124px 32px;
-    gap: 24px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  @include desktop-m-view {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 124px 110px;
-    gap: 24px;
     justify-content: space-between;
     align-items: center;
   }
   @include desktop-l-view {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 124px 300px;
-    gap: 24px;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .text-container {
-    @include desktop-view {
-      width: 50%;
-      text-align: left;
-    }
-    @include desktop-m-view {
-      width: 50%;
-      text-align: left;
-    }
-    @include desktop-l-view {
-      width: 50%;
-      text-align: left;
-    }
-
-    button {
-      margin: 0 auto;
-      @include desktop-view {
-        margin: 0;
-      }
-      @include desktop-m-view {
-        margin: 0;
-      }
-      @include desktop-l-view {
-        margin: 0;
-      }
-    }
+    padding-right: 112px;
   }
 
   .images-container {
     display: flex;
-    flex-wrap: nowrap;
     gap: 24px;
+    img {
+      max-width: 350px;
+    }
 
     @include desktop-view {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      width: 45%;
-    }
-    @include desktop-m-view {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      width: 45%;
-    }
-    @include desktop-l-view {
-      display: flex;
+      width: 40%;
       flex-direction: column;
       gap: 16px;
       width: 45%;
@@ -86,51 +34,51 @@
 
     .image-holder {
       width: 100%;
-
-      @include desktop-view {
-        padding-right: 36px;
-      }
-      @include desktop-m-view {
-        padding-right: 111px;
-      }
-      @include desktop-l-view {
-        padding-right: 150px;
-      }
+      text-align: left;
 
       &.reverse {
         @include desktop-view {
-          padding-right: 0;
-          padding-left: 36px;
-        }
-        @include desktop-m-view {
-          padding-right: 0;
-          padding-left: 111px;
-        }
-        @include desktop-l-view {
-          padding-right: 0;
-          padding-left: 150px;
+          text-align: right;
         }
       }
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    @include desktop-view {
+      width: 50%;
+      max-width: 550px;
+      margin: 0;
+      align-items: unset;
+      text-align: left;
+    }
+    @include desktop-m-view {
+      max-width: 558px;
     }
   }
 
   h2 {
     font-size: $font-size-large-1;
     line-height: 1.11;
-    letter-spacing: $space-xs;
     padding: 37px 0 19px;
-
+    font-weight: $weight-regular;
     @include tablet-view {
       padding: 32px 0 24px;
     }
   }
 
   .text-description {
-    font-family: $font-second;
+    font-family: $font-second, $font-family-fallback;
     font-size: $font-size-small-2;
     font-weight: $weight-light;
     line-height: 1.75;
-    letter-spacing: $space-xs;
     padding-bottom: 24px;
+    @include desktop-view {
+      padding-bottom: 32px;
+    }
   }
 }

@@ -1,7 +1,6 @@
 .button {
-  font-family: $font-main;
+  font-family: $font-main, $font-family-fallback;
   background-color: $accent;
-  position: relative;
   color: $white;
   border: 1px solid $accent;
   font-size: $font-size-small-2;
@@ -9,21 +8,50 @@
   letter-spacing: $space-s;
   text-transform: uppercase;
   padding: 20px 32px;
+  transition: all ease-in-out 0.3s;
 
   &:hover {
     transform: scale(1.05);
     cursor: pointer;
+    background-color: $dark-accent;
+  }
+  &.button-text {
+    background-color: transparent;
+    border: transparent;
+    position: absolute;
+    padding: 0;
+    top: 20px;
+    left: 32px;
+    &.book {
+      left: 56px;
+    }
   }
 
   &.button-effect {
-    background-repeat: no-repeat;
-    opacity: 1;
+    width: 215px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -50px;
+      transform: rotate(45deg);
+      width: 150px;
+      height: 100px;
+      background-color: $dark-accent;
+    }
+    &.book {
+      width: 208px;
+    }
   }
 
   &.button-search {
+    width: 100%;
     font-size: $font-size-small-1;
     line-height: 1.43;
-    width: 100%;
     padding: 16px 20px;
   }
 }

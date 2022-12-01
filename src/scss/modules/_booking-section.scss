@@ -1,44 +1,21 @@
-.booking-section-container {
-  width: 100%;
+.booking-section {
   background-position: center;
   background-repeat: no-repeat;
-  padding: 120px 18px;
-
-  @include tablet-view {
-    padding: 120px 24px;
-  }
+  background-size: cover;
+  padding: 120px 0;
   @include desktop-view {
-    padding: 220px 32px 120px;
+    padding-top: 220px;
   }
-  @include desktop-m-view {
-    padding: 220px 32px 120px;
-  }
-  @include desktop-l-view {
-    padding: 220px 300px 120px;
-  }
-  &.reverse {
-    .text-holder {
-      @include desktop-view {
-        margin: 0 0 0 auto;
-      }
-      @include desktop-m-view {
-        margin: 0 0 0 auto;
-      }
-      @include desktop-l-view {
-        margin: 0 0 0 auto;
-      }
-    }
-  }
-
+}
+.booking-section-container {
   .text-holder {
     background-color: $light-black;
     padding: 44px 32px;
     text-align: left;
     font-size: $font-size-middle-1;
     line-height: 1.4;
-    font-family: $font-second;
+    font-family: $font-second, $font-family-fallback;
     font-weight: $weight-light;
-    letter-spacing: $space-s;
     @include desktop-view {
       max-width: 550px;
     }
@@ -54,12 +31,24 @@
     padding: 16px 0;
     text-transform: uppercase;
     font-weight: $weight-regular;
-    letter-spacing: $space-xs;
   }
 
   .text-description {
     font-size: $font-size-small-2;
     line-height: 1.75;
+    letter-spacing: $space-s;
     padding-bottom: 28px;
+
+    @include desktop-view {
+      padding-bottom: 24px;
+    }
+  }
+
+  &.reverse {
+    .text-holder {
+      @include desktop-view {
+        margin: 0 0 0 auto;
+      }
+    }
   }
 }
