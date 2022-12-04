@@ -338,6 +338,7 @@ body {
 .button.button-effect.book {
   display: block;
   max-width: 208px;
+  width: 100%;
 }
 .button.button-search {
   width: 100%;
