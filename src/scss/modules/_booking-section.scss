@@ -8,6 +8,9 @@
   }
 }
 .booking-section-container {
+  display: flex;
+  justify-content: flex-start;
+
   .text-holder {
     background-color: $light-black;
     padding: 44px 32px;
@@ -16,11 +19,6 @@
     line-height: 1.4;
     font-family: $font-second, $font-family-fallback;
     font-weight: $weight-light;
-
-    @include small-mobile-view {
-      font-size: $font-size-small-2;
-      padding: 44px 8px;
-    }
 
     @include desktop-view {
       max-width: 550px;
@@ -45,20 +43,14 @@
     letter-spacing: $space-s;
     padding-bottom: 28px;
 
-    @include small-mobile-view {
-      font-size: $font-size-small-1;
-    }
-
     @include desktop-view {
       padding-bottom: 24px;
     }
   }
 
   &.reverse {
-    .text-holder {
-      @include desktop-view {
-        margin: 0 0 0 auto;
-      }
+    @include desktop-view {
+      justify-content: flex-end;
     }
   }
 }

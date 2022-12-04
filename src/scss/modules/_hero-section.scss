@@ -1,18 +1,30 @@
 .hero-section {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 84px;
+  min-height: calc(100vh - 84px);
   @include tablet-view {
     margin-top: 136px;
+    min-height: calc(100vh - 136px);
   }
   @include desktop-view {
     margin-top: 84px;
+    min-height: calc(100vh - 84px);
   }
 }
 
 .hero-section-container {
   display: flex;
+  width: 100%;
+  @include small-mobile-view {
+    width: calc(100% - 20px);
+  }
   flex-direction: column;
   align-items: center;
   font-family: $font-second, $font-family-fallback;
@@ -21,12 +33,7 @@
     font-size: $font-size-large-2;
     font-weight: $weight-bold;
     line-height: 1.08;
-    padding-top: 295px;
     padding-bottom: 8px;
-
-    @include small-mobile-view {
-      font-size: $font-size-middle-3;
-    }
   }
 
   .subheading {
@@ -40,9 +47,7 @@
   .form-holder {
     width: 100%;
     max-width: 540px;
-    @include small-mobile-view {
-      max-width: 250px;
-    }
+
     @include tablet-view {
       max-width: 647px;
     }
@@ -51,21 +56,15 @@
     display: flex;
     background-color: $white;
     padding: 4px 5px 4px 36px;
-    @include small-mobile-view {
-      padding: 0;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-      background-color: transparent;
-    }
   }
 
   .button-holder {
     max-width: 139px;
   }
   .scroll-holder {
-    max-width: 102px;
-    padding: 211px 0 120px;
+    position: absolute;
+    bottom: 14vh;
+    left: calc(50% - 51px);
   }
   .icon-chevron-down {
     display: block;
@@ -81,15 +80,9 @@
   padding: 0 5px;
   color: $grey;
   border: none;
-  @include small-mobile-view {
-    padding: 5px;
-    font-size: 12px;
-  }
 
   &:focus {
     outline: none;
-    border: 1px solid $accent;
-    box-shadow: 0 0 10px $accent;
 
     &::placeholder {
       color: transparent;

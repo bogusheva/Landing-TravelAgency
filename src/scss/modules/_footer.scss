@@ -20,8 +20,10 @@
     display: flex;
     gap: 32px;
     justify-content: center;
+    width: 100%;
     @include small-mobile-view {
-      gap: 16px;
+      gap: 0;
+      justify-content: space-evenly;
     }
   }
   .icon-facebook-f,

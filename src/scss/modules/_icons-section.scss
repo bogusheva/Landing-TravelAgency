@@ -12,7 +12,7 @@
     height: 30px;
     @include desktop-view {
       display: block;
-      width: 80%;
+      width: 70%;
       height: 40px;
     }
     @include desktop-m-view {
@@ -20,6 +20,9 @@
     }
     @include desktop-l-view {
       height: 57px;
+    }
+    img {
+      width: 100%;
     }
   }
 
@@ -33,9 +36,18 @@
       justify-content: space-around;
     }
   }
+  .icons-item-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .icons-holder {
     padding: 16px;
+    border-radius: 50%;
+    background-color: $dark-grey;
+    overflow: hidden;
+    width: 100px;
   }
 
   .subheading {
@@ -43,19 +55,12 @@
     font-size: $font-size-large-1;
     line-height: 1.11;
     padding-top: 4px;
-    @include small-mobile-view {
-      font-size: $font-size-middle-1;
-    }
   }
   .icon-search,
   .icon-thumbs-up,
   .icon-check-circle {
     font-family: $font-main, $font-family-fallback;
     font-size: $font-size-large-3;
-
-    @include small-mobile-view {
-      font-size: $font-size-middle-2;
-    }
   }
   .icon-search {
     color: $accent;
@@ -63,9 +68,6 @@
 
   .icon-check-circle {
     color: $red;
-    @include desktop-view {
-      padding-left: 10px;
-    }
   }
 
   .icon-thumbs-up {

@@ -3,22 +3,29 @@
   background-color: $accent;
   width: 100%;
   top: 0;
+  left: 0;
   z-index: 5;
+  padding: 28px 0;
+  @include tablet-view {
+    padding-bottom: 0;
+  }
+
+  @include desktop-view {
+    padding: 28px 0;
+  }
 }
 
 .header-menu {
   display: flex;
   justify-content: center;
-  padding: 32px 0;
+
   @include tablet-view {
     flex-direction: column;
-    padding-bottom: 0;
   }
 
   @include desktop-view {
     flex-direction: row;
     justify-content: space-between;
-    padding: 32px 0;
   }
 
   &.active {
@@ -50,9 +57,6 @@
     font-family: $font-second, $font-family-fallback;
     line-height: 1.17;
     letter-spacing: $space-s;
-    @include small-mobile-view {
-      font-size: $font-size-middle-1;
-    }
   }
 
   .nav-holder {
@@ -98,11 +102,9 @@
 
   .burger-holder {
     position: absolute;
-    top: 32px;
+    top: 28px;
     right: 30px;
-
     @include small-mobile-view {
-      top: 30px;
       right: 10px;
     }
   }
