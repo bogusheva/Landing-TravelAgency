@@ -323,6 +323,13 @@ body {
   height: 60px;
   position: relative;
   overflow: hidden;
+  display: block;
+}
+@media (max-width: 575px) {
+  .button.button-effect {
+    width: 100%;
+    max-width: 215px;
+  }
 }
 .button.button-effect::before {
   content: "";
@@ -334,11 +341,6 @@ body {
   width: 150px;
   height: 100px;
   background-color: #486bfe;
-}
-.button.button-effect.book {
-  display: block;
-  max-width: 208px;
-  width: 100%;
 }
 .button.button-search {
   width: 100%;
@@ -358,10 +360,9 @@ body {
   position: absolute;
   padding: 0;
   top: 20px;
-  left: 32px;
-}
-.button-text.book {
-  left: calc(50% - 52px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .header {
@@ -621,7 +622,9 @@ body {
 .hero-section-container .scroll-holder {
   position: absolute;
   bottom: 14vh;
-  left: calc(50% - 51px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .hero-section-container .icon-chevron-down {
   display: block;
